@@ -16,4 +16,5 @@ const pokemonReducer = (state = {}, action) => {
   }
 };
 
+
 export default pokemonReducer;

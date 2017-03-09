@@ -103,6 +103,18 @@ h3 {
   color: $black;
 }
 
+ul {
+  list-style: none;
+}
+
+.pokedex {
+  display: flex;
+}
+
+.pokemon-detail {
+  display: flex;
+}
+
 .poke-thumb {
   width: 40px;
   transition: width 0.3s;

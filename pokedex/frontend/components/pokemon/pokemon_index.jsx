@@ -15,6 +15,7 @@ class PokemonIndex extends React.Component {
     const pokemonList = pokemon.map( (poke, idx) => (
       <li className="pokemon" key={idx}>
         <img className="poke-thumb" src={poke.image_url} />
+        <br />
         {poke.name}
       </li>
     ));

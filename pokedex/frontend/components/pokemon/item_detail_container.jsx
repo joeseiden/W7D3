@@ -3,7 +3,9 @@ import ItemDetail from './item_detail';
 import { selectPokemonItem } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => ({
-  item: selectPokemonItem(state, ownProps.params.id)
+    item: selectPokemonItem(state, ownProps.params.itemId)
 });
 
 export default connect(mapStateToProps)(ItemDetail);
+
+window.selectPokemonItem = selectPokemonItem;

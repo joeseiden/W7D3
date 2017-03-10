@@ -25,9 +25,8 @@ class PokemonDetail extends React.Component {
     if (pokemon.items) {
       items = pokemon.items.map((item, idx) => (
         <li key={idx}>
-          <Link to={`/pokemon/${pokemon.id}/item/${item.id}`}>
+          <Link to={`/pokemon/${pokemon.id}/item/${idx}`}>
             <img src={item.image_url}/>
-            <ItemDetail key={item.id} item={item}/>
           </Link>
         </li>
       ));
@@ -40,9 +39,9 @@ class PokemonDetail extends React.Component {
       ));
     }
 
-    let itemDetail = () => {
-      <ItemDetail item={this.props.params.id}/>;
-    };
+    let itemDetail = (item) => (
+      <ItemDetail key={item.id} item={item}/>
+    );
 
     return (
       <div className="pokemon-detail">
@@ -60,11 +59,6 @@ class PokemonDetail extends React.Component {
       </div>
     );
   }
-
 }
 
-
 export default PokemonDetail;
-
-
-// <ul>{ pokemon.moves.map (move => <li>{move}</li>)}</ul>

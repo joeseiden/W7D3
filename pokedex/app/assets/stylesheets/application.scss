@@ -116,16 +116,22 @@ ul {
 }
 
 .poke-thumb {
-  width: 40px;
-  transition: width 0.3s;
-}
-
-.poke-thumb:hover {
-  width: 80px;
+  height: 40px;
+  transition: height 0.3s;
 }
 
 .pokemon {
-  margin: 7px;
+  margin: 10px;
+  display: flex;
+  height: 40px;
+  transition: height 0.3s;
+}
+
+.pokemon:hover {
+  height: 80px;
+  .poke-thumb {
+    height: 80px;
+  }
 }
 
 .poke-list {
